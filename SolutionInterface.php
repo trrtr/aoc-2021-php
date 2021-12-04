@@ -7,7 +7,7 @@ declare(strict_types=1);
  */
 interface SolutionInterface
 {
-    public function task1(array $input): int;
+    public function task1($input): int;
 
-    public function task2(array $input): int;
+    public function task2($input): int;
 }

@@ -6,8 +6,9 @@ include __DIR__ . DIRECTORY_SEPARATOR . $argv[1]. DIRECTORY_SEPARATOR . "Solutio
 $solution = new Solution();
 
 $input = Utils::readInput(__DIR__ . DIRECTORY_SEPARATOR . $argv[1]. DIRECTORY_SEPARATOR . 'input.txt');
-$preparedInput = $solution->prepareInput($input);
 
-echo sprintf('Solution for day %s task 1: %d', $argv[1], $solution->task1($preparedInput));
+$preparedInput1 = $solution->prepareInput($input);
+echo sprintf('Solution for day %s task 1: %d', $argv[1], $solution->task1($preparedInput1));
 echo "\n";
-echo sprintf('Solution for day %s task 2: %d', $argv[1], $solution->task2($preparedInput));
+$preparedInput2 = $solution->prepareInput($input);
+echo sprintf('Solution for day %s task 2: %d', $argv[1], $solution->task2($preparedInput2));

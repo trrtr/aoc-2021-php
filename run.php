@@ -1,7 +1,12 @@
 <?php
 
 include __DIR__ . DIRECTORY_SEPARATOR . 'Utils.php';
-include __DIR__ . DIRECTORY_SEPARATOR . $argv[1]. DIRECTORY_SEPARATOR . "Solution.php";
+include __DIR__ . DIRECTORY_SEPARATOR . 'SolutionInterface.php';
+foreach (scandir(__DIR__ . DIRECTORY_SEPARATOR . $argv[1]) as $file) {
+    if (str_ends_with($file, '.php')) {
+        include __DIR__ . DIRECTORY_SEPARATOR . $argv[1] . DIRECTORY_SEPARATOR . $file;
+    }
+}
 
 $solution = new Solution();
 

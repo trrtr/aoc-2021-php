@@ -10,4 +10,11 @@ final class Utils
 
         return explode("\n", $inputText);
     }
+
+    public static function gridOfInts(array $grid): array
+    {
+        $input = array_filter($grid);
+
+        return array_map(fn(string $row) => array_map('intval', str_split($row)), $input);
+    }
 }
